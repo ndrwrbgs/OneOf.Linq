@@ -236,15 +236,21 @@
                 throw new ArgumentNullException(nameof(predicate));
             }
 
+            bool hasAny = false;
             TSource result = default(TSource);
             foreach (TSource element in source)
             {
                 if (predicate(element))
                 {
                     result = element;
+                    hasAny = true;
                 }
             }
 
+            if (!hasAny)
+            {
+                return default(NoElements);
+            }
             return result;
         }
 
