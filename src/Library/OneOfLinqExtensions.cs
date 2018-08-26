@@ -3,16 +3,70 @@
     using System;
     using System.Collections.Generic;
     using JetBrains.Annotations;
+    
+    public static class OneOfExtensions
+    {
+        public static bool HasValue<T, TWhyNot>(
+            this OneOf<T, TWhyNot> source)
+        where TWhyNot : IReasonWhyNot
+        {
+            return source.IsT0;
+        }
 
-    public sealed class MoreThanOneElement
+        public static T Value<T, TWhyNot>(
+            this OneOf<T, TWhyNot> source)
+            where TWhyNot : IReasonWhyNot
+        {
+            return source.AsT0;
+        }
+
+        public static TWhyNot WhyNot<T, TWhyNot>(
+            this OneOf<T, TWhyNot> source)
+            where TWhyNot : IReasonWhyNot
+        {
+            return source.AsT1;
+        }
+        
+        public static bool HasValue<T, TWhyNot1, TWhyNot2>(
+            this OneOf<T, TWhyNot1, TWhyNot2> source)
+            where TWhyNot1 : IReasonWhyNot
+            where TWhyNot2 : IReasonWhyNot
+        {
+            return source.IsT0;
+        }
+
+        public static T Value<T, TWhyNot1, TWhyNot2>(
+            this OneOf<T, TWhyNot1, TWhyNot2> source)
+            where TWhyNot1 : IReasonWhyNot
+            where TWhyNot2 : IReasonWhyNot
+        {
+            return source.AsT0;
+        }
+
+        public static IReasonWhyNot WhyNot<T, TWhyNot1, TWhyNot2>(
+            this OneOf<T, TWhyNot1, TWhyNot2> source)
+            where TWhyNot1 : IReasonWhyNot
+            where TWhyNot2 : IReasonWhyNot
+        {
+            return source
+                .Match<IReasonWhyNot>(
+                    _ => throw new InvalidOperationException(),
+                    whyNot => whyNot,
+                    whyNot => whyNot);
+        }
+    }
+
+    public interface IReasonWhyNot{}
+
+    public struct MoreThanOneElement : IReasonWhyNot
     {
     }
 
-    public struct NoElements
+    public struct NoElements : IReasonWhyNot
     {
     }
 
-    public struct IndexOutOfBounds
+    public struct IndexOutOfBounds : IReasonWhyNot
     {
     }
 
@@ -164,7 +218,7 @@
                 }
             }
 
-            return default(TSource);
+            return default(NoElements);
         }
 
         public static OneOf<TSource, NoElements> LastOrReasonWhyNot<TSource>(

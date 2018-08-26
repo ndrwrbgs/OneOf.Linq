@@ -5,6 +5,9 @@
     <TargetFrameworks>net451;netstandard1.3</TargetFrameworks>
     <RootNamespace>OneOf.Linq</RootNamespace>
     <AssemblyName>OneOf.Linq</AssemblyName>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
