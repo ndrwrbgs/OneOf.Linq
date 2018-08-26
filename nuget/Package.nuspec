@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>OneOf.Linq</id>
+    <version>0.1</version>
+    <authors>ndrwrbgs</authors>
+    <owners>ndrwrbgs</owners>
+    <licenseUrl>https://github.com/ndrwrbgs/OneOf.Linq/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ndrwrbgs/OneOf.Linq</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Linq extensions built to extend the OneOf library</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags></tags>
+    <dependencies>
+      <dependency id="OneOf" version="2.1.125" />
+    </dependencies>
+  </metadata>
+</package>
