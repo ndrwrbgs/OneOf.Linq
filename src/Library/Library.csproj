@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net451;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
     <RootNamespace>OneOf.Linq</RootNamespace>
     <AssemblyName>OneOf.Linq</AssemblyName>
     <ApplicationIcon />
@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OneOf" Version="2.1.125" />
+    <PackageReference Include="OneOf.NET45" Version="2.1.125" />
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

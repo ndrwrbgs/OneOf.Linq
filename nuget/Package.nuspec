@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>OneOf.Linq</id>
-    <version>0.1</version>
+    <version>0.2</version>
     <authors>ndrwrbgs</authors>
     <owners>ndrwrbgs</owners>
     <licenseUrl>https://github.com/ndrwrbgs/OneOf.Linq/blob/master/LICENSE</licenseUrl>

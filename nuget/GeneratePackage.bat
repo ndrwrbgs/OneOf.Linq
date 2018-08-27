@@ -5,8 +5,8 @@ msbuild %~dp0\..\src\Library\Library.csproj /p:Configuration=Release /v:m
 
 REM exit if if failed
 if %errorlevel% neq 0 exit /b %errorlevel%
-xcopy /Y %~dp0\..\src\Library\bin\Release\net4.5\OneOf.Linq.dll %~dp0\lib\net45
-xcopy /Y %~dp0\..\src\Library\bin\Release\net4.5\OneOf.Linq.pdb %~dp0\lib\net45
+xcopy /Y %~dp0\..\src\Library\bin\Release\net45\OneOf.Linq.dll %~dp0\lib\net45
+xcopy /Y %~dp0\..\src\Library\bin\Release\net45\OneOf.Linq.pdb %~dp0\lib\net45
 
 echo.
 echo.
