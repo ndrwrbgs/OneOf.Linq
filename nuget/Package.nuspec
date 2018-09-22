@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>OneOf.Linq</id>
-    <version>0.2</version>
+    <version>1.0</version>
     <authors>ndrwrbgs</authors>
     <owners>ndrwrbgs</owners>
     <licenseUrl>https://github.com/ndrwrbgs/OneOf.Linq/blob/master/LICENSE</licenseUrl>
@@ -13,7 +13,7 @@
     <copyright>Copyright 2018</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="OneOf" version="2.1.125" />
+      <dependency id="OneOf" version="2.1.127" />
     </dependencies>
   </metadata>
 </package>

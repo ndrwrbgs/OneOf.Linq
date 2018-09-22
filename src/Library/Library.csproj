@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OneOf.NET45" Version="2.1.125" />
+    <PackageReference Include="OneOf" Version="2.1.127" />
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
