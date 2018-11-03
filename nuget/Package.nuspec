@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>OneOf.Linq</id>
-    <version>1.0</version>
+    <version>2.0</version>
     <authors>ndrwrbgs</authors>
     <owners>ndrwrbgs</owners>
     <licenseUrl>https://github.com/ndrwrbgs/OneOf.Linq/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ndrwrbgs/OneOf.Linq</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Linq extensions built to extend the OneOf library</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Convert HasValue to IsSuccess, since failure (WhyNot) _is_ a value too.</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags></tags>
     <dependencies>

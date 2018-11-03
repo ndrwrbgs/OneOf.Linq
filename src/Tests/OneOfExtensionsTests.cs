@@ -8,22 +8,22 @@
     [TestFixture]
     internal static class OneOfExtensionsTests
     {
-        private static class HasValueTests
+        private static class IsSuccessTests
         {
             [Test]
-            public static void HasValue2()
+            public static void IsSuccess2()
             {
                 var value = OneOf<int, NoElements>.FromT0(1);
 
-                Assert.IsTrue(value.HasValue());
+                Assert.IsTrue(value.IsSuccess());
             }
 
             [Test]
-            public static void HasValue3()
+            public static void IsSuccess3()
             {
                 var value = OneOf<int, NoElements, NoElements>.FromT0(1);
 
-                Assert.IsTrue(value.HasValue());
+                Assert.IsTrue(value.IsSuccess());
             }
 
             [Test]
@@ -31,7 +31,7 @@
             {
                 var value = OneOf<int, NoElements>.FromT1(default(NoElements));
 
-                Assert.IsFalse(value.HasValue());
+                Assert.IsFalse(value.IsSuccess());
             }
 
             [Test]
@@ -39,7 +39,7 @@
             {
                 var value = OneOf<int, NoElements, NoElements>.FromT1(default(NoElements));
 
-                Assert.IsFalse(value.HasValue());
+                Assert.IsFalse(value.IsSuccess());
             }
 
             //[Test] Fails presently, pending https://github.com/mcintyre321/OneOf/issues/29
@@ -49,7 +49,7 @@
                 Assert.IsFalse(value.IsT0);
                 Assert.IsFalse(value.IsT1);
                 Assert.AreNotEqual(0, value.Value);
-                Assert.IsFalse(value.HasValue());
+                Assert.IsFalse(value.IsSuccess());
             }
 
             //[Test] Fails presently, pending https://github.com/mcintyre321/OneOf/issues/29
@@ -59,14 +59,14 @@
                 Assert.IsFalse(value.IsT0);
                 Assert.IsFalse(value.IsT1);
                 Assert.AreNotEqual(0, value.Value);
-                Assert.IsFalse(value.HasValue());
+                Assert.IsFalse(value.IsSuccess());
             }
         }
 
         private static class ValueTests
         {
             [Test]
-            public static void HasValue2()
+            public static void IsSuccess2()
             {
                 var value = OneOf<int, NoElements>.FromT0(1);
 
@@ -79,7 +79,7 @@
             }
 
             [Test]
-            public static void HasValue3()
+            public static void IsSuccess3()
             {
                 var value = OneOf<int, NoElements, NoElements>.FromT0(1);
 
@@ -125,7 +125,7 @@
         private static class WhyNotTests
         {
             [Test]
-            public static void HasValue2()
+            public static void IsSuccess2()
             {
                 var value = OneOf<int, NoElements>.FromT0(1);
 
@@ -139,7 +139,7 @@
             }
 
             [Test]
-            public static void HasValue3()
+            public static void IsSuccess3()
             {
                 var value = OneOf<int, NoElements, NoElements>.FromT0(1);
 
