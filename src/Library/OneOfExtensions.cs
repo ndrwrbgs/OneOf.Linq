@@ -8,7 +8,7 @@
     /// </summary>
     public static class OneOfExtensions
     {
-        public static bool HasValue<T, TWhyNot>(
+        public static bool IsSuccess<T, TWhyNot>(
             this OneOf<T, TWhyNot> source)
             where TWhyNot : IReasonWhyNot
         {
@@ -29,7 +29,7 @@
             return source.AsT1;
         }
 
-        public static bool HasValue<T, TWhyNot1, TWhyNot2>(
+        public static bool IsSuccess<T, TWhyNot1, TWhyNot2>(
             this OneOf<T, TWhyNot1, TWhyNot2> source)
             where TWhyNot1 : IReasonWhyNot
             where TWhyNot2 : IReasonWhyNot
